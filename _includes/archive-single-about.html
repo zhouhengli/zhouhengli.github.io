@@ -1,0 +1,113 @@
+{% include base_path %}
+
+{% if post.header.teaser %}
+  {% capture teaser %}{{ post.header.teaser }}{% endcapture %}
+{% else %}
+  {% assign teaser = site.teaser %}
+{% endif %}
+
+{% if post.id %}
+  {% assign title = post.title | markdownify | remove: "<p>" | remove: "</p>" %}
+{% else %}
+  {% assign title = post.title %}
+{% endif %}
+
+<script src="{{ base_path }}/assets/js/popup.js"></script>
+<script src="{{ base_path }}/assets/js/copy.js"></script>
+
+{% if post.paperteaser %}
+    <div class="paper-box">
+        <div class="paper-box-image">
+            <div>
+                <div class="badge">
+                    <a href="{{ post.venue-link }}" style="text-decoration: underline; color: white; font-weight: bold;" target=_blank >{{ post.venue-brief }}</a>
+                </div>
+                <img src="{{ post.paperteaser }}" alt="sym" width="100%">
+            </div>
+        </div>
+        <div class="paper-box-text">
+            <p style="font-size: 15px;" >
+                <strong>{{ post.title }}</strong> <br>
+            </p>
+            <p style="line-height: 0.3; font-size: 15px;">
+                {% include excerpt-about-template.html %}
+            </p>
+            
+            <p style="line-height: 0.5; font-size: 15px;">
+            {% if post.paperurl %}
+                <div class=btn-links style="display: inline; margin-left: 0px;" id="title-{{ title | slugify }}">
+                    <a class="btn btn-outline-primary btn-page-header btn-sm show-button-big" 
+                        href="{{ post.paperurl }}" 
+                        style="text-decoration: none;"
+                        target=_blank 
+                        rel=noopener>
+                        PDF
+                    </a>
+                </div>
+            {% endif %}
+
+            {% if post.citation %}
+                {% include popup-template.html %}
+                <script>
+                    var titleSlugified = "{{ title | slugify }}"; 
+                    createPopupButton('title-' + titleSlugified, 'popup-' + titleSlugified, 'big');
+                </script>
+            {% endif %}
+
+            {% if post.code %}
+                <div class=btn-links style="display: inline; margin-left: 5px;">
+                    <a class="btn btn-outline-primary btn-page-header btn-sm show-button-big" 
+                        href="{{ post.code }}" 
+                        style="text-decoration: none;"
+                        target=_blank 
+                        rel=noopener>
+                        Code
+                    </a>
+                </div>
+            {% endif %}
+            </p>
+        </div>
+    </div>
+{% else %}
+    <div style="font-size: 1.0em; display: inline; line-height: 0.0">
+        <strong>{{ post.title }}</strong> 
+        {% if post.paperurl %}
+            <div class="btn-links" style="display: inline; margin-left: 10px;">
+                <a class="btn btn-outline-primary btn-page-header btn-sm show-button-normal" 
+                    href="{{ post.paperurl }}" 
+                    style="text-decoration: none;"
+                    target="_blank" 
+                    rel="noopener">
+                    PDF
+                </a>
+            </div>
+        {% endif %}
+    </div>
+    
+
+    {% if post.citation %}
+        {% include popup-template.html %}
+        <script>
+            var titleSlugified = "{{ title | slugify }}"; 
+            createPopupButton('title-' + titleSlugified, 'popup-' + titleSlugified, 'normal');
+        </script>
+    {% endif %}
+
+    {% if post.code %}
+        <div class=btn-links style="display: inline; margin-left: 5px; display: inline;">
+            <a class="btn btn-outline-primary btn-page-header btn-sm .show-button-normal" 
+                href="{{ post.code }}
+                target="_blank" 
+                style="text-decoration: none;"
+                target=_blank 
+                rel=noopener>
+                Code
+            </a>
+        </div>
+    {% endif %}
+
+    <p style="line-height: 0.0; font-size: 15px;">
+        {% include excerpt-about-template.html %}
+    </p>
+
+{% endif %}

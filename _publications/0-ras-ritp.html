@@ -1,0 +1,187 @@
+---
+title: "A rapid iterative trajectory planning method for automated parking through differential flatness"
+collection: publications
+category: journals
+permalink: /publication/ritp
+date: 2024-9-23
+paperteaser: "media/ritp/teaser.gif"
+excerpt: "Zhouheng Li, Lei Xie, Cheng Hu, Hongye Su"
+venue: "Robotics and Autonomous Systems"
+venue-brief: "RAS"
+venue-link: "https://www.sciencedirect.com/journal/robotics-and-autonomous-systems"
+paperurl: "https://www.sciencedirect.com/science/article/abs/pii/S0921889024002008"
+weight: 0
+citation: "Li Z, Xie L, Hu C, et al. A rapid iterative trajectory planning method for automated parking through differential flatness[J]. Robotics and Autonomous Systems, 2024, 182: 104816."
+citation-bib: "@article{li2024rapid,
+  title={A rapid iterative trajectory planning method for automated parking through differential flatness},
+  author={Li, Zhouheng and Xie, Lei and Hu, Cheng and Su, Hongye},
+  journal={Robotics and Autonomous Systems},
+  volume={182},
+  pages={104816},
+  year={2024},
+  publisher={Elsevier}
+}"
+---
+
+<div style="text-align: center;">
+    <p>
+  		Authors: <strong>Zhouheng Li</strong><sup>1</sup>, Lei Xie<sup>1</sup>, Cheng Hu<sup>1</sup>, Hongye Su<sup>1</sup>
+    </p>
+    <p>
+      <sup>1</sup>Zhejiang University, Hangzhou, China
+    </p>
+    <p>
+      <a href="https://www.sciencedirect.com/science/article/abs/pii/S0921889024002008">[paper]</a>
+    </p>
+  <strong style="font-size: 30px;">Abstract</strong>
+</div>
+
+<div style="text-align: justify;">
+    <p style="font-size: 15px;">
+        <span style="display: inline-block; text-indent: 2em;">As autonomous driving continues to advance, automated parking is becoming increasingly essential. However, significant challenges arise when implementing path velocity decomposition (PVD) trajectory planning for automated parking. The primary challenge is ensuring rapid and precise collision-free trajectory planning, which is often in conflict. The secondary challenge involves maintaining sufficient control feasibility of the planned trajectory, particularly at gear shifting points (GSP). <strong>This paper proposes a PVD-based rapid iterative trajectory planning (RITP) method to solve the above challenges. The proposed method effectively balances the necessity for time efficiency and precise collision avoidance through a novel collision avoidance framework. Moreover, it enhances the overall control feasibility of the planned trajectory by incorporating the vehicle kinematics model and including terminal smoothing constraints (TSC) at GSP during path planning.</strong> Specifically, the proposed method leverages differential flatness to ensure the planned path adheres to the vehicle kinematic model. Additionally, it utilizes TSC to maintain curvature continuity at GSP, thereby enhancing the control feasibility of the overall trajectory. The simulation results demonstrate superior time efficiency and tracking errors compared to model-integrated and other iteration-based trajectory planning methods. In the real-world experiment, the proposed method was implemented and validated on a ROS-based vehicle, demonstrating the applicability of the RITP method for real vehicles.</span>
+    </p>
+</div>
+
+<div style="text-align: center;">
+    <img src="../media/ritp/pipeline2.png" alt="racing" style="width: 50%; height: auto;">
+    <img src="../media/ritp/pipeline3.png" alt="racing" style="width: 45%; height: auto;">
+	<br>
+</div>
+
+
+<div style="text-align: center;">
+    <img src="../media/ritp/code1.png" alt="racing" style="width: 35%; height: auto;">
+    <img src="../media/ritp/code2.png" alt="racing" style="width: 60%; height: auto;">
+	<br>
+</div>
+
+<div style="text-align: center;">
+  <strong style="font-size: 30px;">Qualitative Results</strong>
+</div>
+<div style="text-align: justify;">
+    <p style="font-size: 15px;">
+        <span style="display: inline-block; text-indent: 2em;">We first present validation results on the <strong>collision-free performance and computational efficiency</strong> of the ItCA method in common scenarios and scenarios with additional obstacles. The analysis shows that the ItCA method guarantees excellent collision-free performance of the planned paths due to its advanced iterative process based on explicit collision detection, and the presence of additional obstacles in the scenarios does not significantly affect the computation time. Therefore, the ItCA method ensures excellent collision-free properties while maintaining real-time performance. </span>
+    </p>
+</div>
+
+
+<div style="text-align: center;">
+    <img src="../media/ritp/exp1.png" alt="racing" style="width: 100%; height: auto;">
+	<br>
+</div>
+<div style="text-align: center;">
+    <img src="../media/ritp/exp0.png" alt="racing" style="width: 50%; height: auto;">
+    <img src="../media/ritp/exp0_1.png" alt="racing" style="width: 45%; height: auto;">
+	<br>
+</div>
+
+
+<div style="text-align: center;">
+    <img src="../media/ritp/exp2.png" alt="racing" style="width: 100%; height: auto;">
+	<br>
+</div>
+
+
+<div style="text-align: justify;">
+    <p style="font-size: 15px;">
+        <span style="display: inline-block; text-indent: 2em;">The following conclusions can be drawn: firstly, <strong>the lack of TSC leads to significant deviations in the yaw angle of the planned trajectory at GSP</strong>, which affects the control feasibility and poses a potential risk to vehicle motion. However, implementing an appropriate TSC can significantly enhance the control feasibility of the planned trajectory, thereby improving overall vehicle safety. Secondly, trajectories planned with CBC, QAC, and QIC polynomials as path carriers exhibit similar control feasibility. However, <strong>CBC polynomial-based trajectory planning is unable to generate delicate parking trajectories due to its limited degrees of freedom</strong>. We also run ten tests with 80 different initial points within the maneuvering area, testing them in parallel, reverse, and diagonal parking scenarios.  As can be seen from Fig. 12, the RITP method is very time efficient. </span>
+    </p>
+</div>
+
+
+<div style="display: flex; justify-content: center; align-items: flex-start;">
+  <div style="display: flex; flex-direction: column; width: 41%;">
+    <img src="../media/ritp/exp4.png" alt="racing" style="width: 100%; height: auto; margin-bottom: 10px;">
+    <img src="../media/ritp/exp5.png" alt="racing" style="width: 100%; height: auto;">
+  </div>
+	<div style="width: 47%; margin-left: 20px;">
+    <img src="../media/ritp/exp6.png" alt="racing" style="width: 100%; height: auto;">
+  </div>
+</div>
+
+
+<div style="text-align: center;">
+  <strong style="font-size: 30px;">Quantitative Results</strong>
+</div>
+<div style="text-align: justify;">
+    <p style="font-size: 15px;">
+        <span style="display: inline-block; text-indent: 2em;">We performed ablation experiments on the RITP method to evaluate the impact of different polynomials and TSC on the computation time of trajectory planning. The results <strong>demonstrate the time efficiency of the RITP method, with TSC constraints having no significant effect on computation time</strong>. We also compared the control feasibility of the planned trajectories by using a parking controller to track trajectories from different methods. Although the CBC polynomial meets the vehicle kinematic model requirements through differential flatness, higher-order polynomials offer greater flexibility and are more suitable for automated parking trajectory planning. Moreover, we verified that <strong>TSC significantly enhances the control feasibility of the planned trajectory at GSP</strong> in typical parking scenarios. </span>
+	</p>
+</div>
+
+<div style="text-align: center;">
+    <img src="../media/ritp/exp3.png" alt="racing" style="width: 100%; height: auto;">
+	<br>
+</div>
+
+<div style="text-align: justify;">
+    <p style="font-size: 15px;">
+        <span style="display: inline-block; text-indent: 2em;">The performance of the planned trajectory of the RITP method is verified when it is tracked by a disturbed controller, utilizing M.TE as the analytical metric. From Table 5, it is evident that with relatively minor control input disturbances, the TE.IP of the planned trajectory can be maintained within <strong>5%</strong> compared to the case without disturbance.</span>
+	</p>
+</div>
+
+
+<div style="text-align: center;">
+    <img src="../media/ritp/exp7.png" alt="racing" style="width: 40%; height: auto;">
+    <img src="../media/ritp/exp8.png" alt="racing" style="width: 55%; height: auto;">
+	<br>
+</div>
+<div style="text-align: center;">
+  <strong style="font-size: 30px;">Real-world Tests</strong>
+</div>
+
+<div style="text-align: justify;">
+    <p style="font-size: 15px;">
+        <span style="display: inline-block; text-indent: 2em;">We utilized the RITP method on the ROS-based NanoCar platform (see Fig. 15). Then, we built parking scenarios for parallel and reverse parking (see Fig. 16) at a 1:10 scale and saved the parameters of these scenarios in Matlab. These parameters will serve as the environmental parameters for the RITP method. we deploy the trajectory planned by the RITP method in NanoCar and employ a simple feed-forward control strategy to track the planned trajectory, yielding encouraging outcomes. The experimental results validate that <strong>the RITP method can plan trajectories with strong control feasibility and is applicable in real-world vehicles</strong>strong>. </span>
+	</p>
+</div>
+
+
+<div style="text-align: center;">
+    <img src="../media/ritp/exp11.png" alt="racing" style="width: 90%; height: auto;">
+	<br>
+</div>
+
+
+
+<div style="display: flex; justify-content: center; align-items: flex-start;">
+  <div style="display: flex; flex-direction: column; width: 41%;">
+    <img src="../media/ritp/exp9.png" alt="racing" style="width: 100%; height: auto; margin-bottom: 10px;">
+    <img src="../media/ritp/exp10.png" alt="racing" style="width: 100%; height: auto;">
+  </div>
+	<div style="width: 45%; margin-left: 20px;">
+    <img src="../media/ritp/exp12.png" alt="racing" style="width: 100%; height: auto;">
+  </div>
+</div>
+
+
+
+<div style="text-align: center;">
+    <img src="../media/ritp/exp13.png" alt="racing" style="width: 40%; height: auto;">
+    <img src="../media/ritp/exp14.png" alt="racing" style="width: 40%; height: auto;">
+	<br>
+</div>
+
+<div style="text-align: center;">
+    <img src="../media/ritp/real_parallel.gif" alt="racing" style="width: 50%; height: auto;">
+    <img src="../media/ritp/real_reverse.gif" alt="racing" style="width: 41%; height: auto;">
+	<br>
+</div>
+
+
+
+<div style="text-align: center;">
+  <strong style="font-size: 30px;">BibTeX</strong>
+</div>
+
+```json
+@article{li2024rapid,
+  title={A rapid iterative trajectory planning method for automated parking through differential flatness},
+  author={Li, Zhouheng and Xie, Lei and Hu, Cheng and Su, Hongye},
+  journal={Robotics and Autonomous Systems},
+  pages={104816},
+  year={2024},
+  publisher={Elsevier}
+}
+```
+

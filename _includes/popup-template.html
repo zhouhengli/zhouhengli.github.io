@@ -1,0 +1,27 @@
+<!-- condition = true; -->
+<div id="title-{{ title | slugify }}" style="display: inline; margin-left: 0px;"></div>
+
+<!-- Popup container -->
+<div class="popup" id="popup-{{ title | slugify }}">
+
+    <p class="popup-label gb">
+
+    <button class="copy-btn" 
+        onclick="copyToClipboard('cite1-{{ title | slugify }}')">
+        Copy
+    </button>
+
+    <div class="code-box" id="cite1-{{ title | slugify }}">{{ post.citation }}</div></p>
+
+    <p class="popup-label bib"></p>
+    
+    <button class="copy-btn" 
+        onclick="copyToClipboard('cite2-{{ title | slugify }}')">
+        Copy
+    </button>
+
+    <div class="code-box" id="cite2-{{ title | slugify }}">{{ post.citation-bib }}</div></p>
+
+    <button onclick="closePopup('popup-{{ title | slugify }}')">Close</button>
+</div>
+

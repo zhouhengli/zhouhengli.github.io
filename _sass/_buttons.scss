@@ -1,0 +1,218 @@
+/* ==========================================================================
+   BUTTONS
+   ========================================================================== */
+
+/*
+   Default button
+   ========================================================================== */
+
+.btn {
+  /* default button */
+  display: inline-block;
+  margin-bottom: 0.25em;
+  padding: 0.5em 1em;
+  color: #fff !important;
+  font-family: $sans-serif;
+  font-size: $type-size-6;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  background-color: $primary-color;
+  border: 0 !important;
+  border-radius: $border-radius;
+  cursor: pointer;
+
+  &:hover {
+    background-color: mix(white, #000, 20%);
+  }
+
+  .icon {
+    margin-right: 0.5em;
+  }
+
+  .icon + .hidden {
+    margin-left: -0.5em; /* override for hidden text*/
+  }
+
+  /* fills width of parent container */
+
+  &--block {
+    display: block;
+    width: 100%;
+
+    + .btn--block {
+      margin-top: 0.25em;
+    }
+  }
+
+  /* for dark backgrounds */
+
+  &--inverse {
+    color: $gray !important;
+    border: 1px solid $light-gray !important; /* override*/
+    background-color: #fff;
+
+    &:hover {
+      color: #fff !important;
+      border-color: $gray;
+    }
+  }
+
+  /* light outline */
+
+  &--light-outline {
+    border: 1px solid #fff !important; /* override*/
+    background-color: transparent;
+  }
+
+  /* information */
+
+  &--info {
+    background-color: $info-color;
+
+    &:hover {
+      background-color: mix(#000, $info-color, 20%);
+    }
+  }
+
+  /* warning */
+
+  &--warning {
+    background-color: $warning-color;
+
+    &:hover {
+      background-color: mix(#000, $warning-color, 20%);
+    }
+  }
+
+  /* success */
+
+  &--success {
+    background-color: $success-color;
+
+    &:hover {
+      background-color: mix(#000, $success-color, 20%);
+    }
+  }
+
+  /* danger */
+
+  &--danger {
+    background-color: $danger-color;
+
+    &:hover {
+      background-color: mix(#000, $danger-color, 20%);
+    }
+  }
+
+  /* disabled */
+
+  &--disabled {
+    pointer-events: none;
+    cursor: not-allowed;
+    filter: alpha(opacity=65);
+    box-shadow: none;
+    opacity: 0.65;
+  }
+
+  /* social buttons */
+
+  $social:
+  (facebook, $facebook-color),
+  (twitter, $twitter-color),
+  (google-plus, $google-plus-color),
+  (linkedin, $linkedin-color);
+
+  @each $socialnetwork, $color in $social {
+    &--#{$socialnetwork} {
+      background-color: $color;
+
+      &:hover {
+        background-color: mix(#000, $color, 20%);
+      }
+    }
+  }
+
+  /* extra large button */
+
+  &--x-large {
+    font-size: $type-size-4;
+  }
+
+  /* large button */
+
+  &--large {
+    font-size: $type-size-5;
+  }
+
+  /* small button */
+
+  &--small {
+    font-size: $type-size-7;
+  }
+}
+
+/* Custom popup style with white background and black text */
+.popup {
+  all: unset;
+  display: none; /* Initially hidden */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 30px;
+  background: white; /* White background for the popup */
+  color: black; /* Black text for better readability */
+  border-radius: 15px; /* More rounded corners */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+  z-index: 9999;
+  max-width: 90%; /* Limit maximum width */
+  max-height: 80%; /* Limit maximum height */
+  overflow: auto; /* Allow scrolling if content overflows */
+  font-family: 'Arial', sans-serif; /* Improved font readability */
+  animation: fadeIn 0.3s ease-out; /* Smooth fade-in effect */
+  border: 2px solid #ccc; /* Light border to define the edges */
+}
+
+.code-box {
+  font-family: monospace;    /* Use monospace font */
+  background-color: #f4f4f4; /* Set background color */
+  padding: 10px;             /* Add padding */
+  border: 1px solid #ccc;    /* Set border */
+  border-radius: 5px;        /* Rounded corners */
+  overflow-x: auto;          /* Show horizontal scrollbar when content overflows */
+}
+
+.checkmark-icon {
+  display: inline;
+  font-size: 20px;
+  color: green;
+  display: none; 
+}
+
+.copy-btn {
+  display: inline;  /* Make the button inline */
+  margin-left: 5px;  /* Optional: Add some space between the button and surrounding text */
+  padding: 5px 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.copy-btn:hover {
+  background-color: #45a049;
+}
+
+
+/* Add animation for fade-in */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
