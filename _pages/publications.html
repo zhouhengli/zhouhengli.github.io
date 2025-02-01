@@ -20,7 +20,10 @@ author_profile: true
     {% assign title_shown = true %}
   {% endunless %}
   <ol style="counter-reset: item;">
-    {% assign sorted_posts = site.publications | sort: 'weight' %}
+    <!-- {% assign sorted_posts = site.publications | sort: 'weight' %} -->
+    {% assign positive_posts = site.publications | where_exp: "post", "post.weight >= 0" | sort: "weight" %}
+    {% assign non_positive_posts = site.publications | where_exp: "post", "post.weight < 0" | sort: "weight" %}
+    {% assign sorted_posts = positive_posts | concat: non_positive_posts %}
     {% for post in sorted_posts %}
       {% if post.category != category[0] %}
         {% continue %}

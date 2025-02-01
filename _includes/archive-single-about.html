@@ -26,12 +26,14 @@
             </div>
         </div>
         <div class="paper-box-text">
-            <p style="font-size: 15px;" >
-                <strong>{{ post.title }}</strong> <br>
-            </p>
-            <p style="line-height: 0.3; font-size: 15px;">
+            <p style="margin: 0; ">
+                <strong style="font-size: 15px;">
+                  {{ post.title }}
+                </strong>
+                <br>
                 {% include excerpt-about-template.html %}
             </p>
+              
             
             <p style="line-height: 0.5; font-size: 15px;">
             {% if post.paperurl %}
@@ -69,8 +71,9 @@
         </div>
     </div>
 {% else %}
+    <strong>{{ post.title }}</strong> 
     <div style="font-size: 1.0em; display: inline; line-height: 0.0">
-        <strong>{{ post.title }}</strong> 
+        
         {% if post.paperurl %}
             <div class="btn-links" style="display: inline; margin-left: 10px;">
                 <a class="btn btn-outline-primary btn-page-header btn-sm show-button-normal" 

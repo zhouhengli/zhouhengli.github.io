@@ -117,7 +117,7 @@
       </p>
     {% elsif post.excerpt and site.read_more != 'enabled' %}
       <p class="archive__item-excerpt" itemprop="description">
-        <div style="font-size: 0.9em; color: #999999; line-height: 0.0" >
+        <div style="font-size: 0.9em; color: #999999" >
           {{ post.excerpt | markdownify | replace: "Zhouheng Li", "<strong>Zhouheng Li</strong>" }}
         </div>
       </p>
