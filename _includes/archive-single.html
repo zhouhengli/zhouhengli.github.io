@@ -31,9 +31,10 @@
 
     {% if post.collection == 'publications' %}
     
-      <div style="font-size: 1.0em; color: #0056b3; display: inline; line-height: 0.0">
+      <div style="font-size: 18px; color: #0056b3; display: inline">
         <strong>{{ title }}</strong>
       </div>
+      
       {% if post.paperurl %}
         <div class=btn-links style="display: inline; margin-left: 10px;" 
         id="title-{{ title | slugify }}">
@@ -53,8 +54,6 @@
           var titleSlugified = "{{ title | slugify }}"; 
           createPopupButton('title-' + titleSlugified, 'popup-' + titleSlugified, 'normal');
         </script>
-        
-        
       {% endif %}
 
       {% if post.link %}
@@ -117,7 +116,7 @@
       </p>
     {% elsif post.excerpt and site.read_more != 'enabled' %}
       <p class="archive__item-excerpt" itemprop="description">
-        <div style="font-size: 0.9em; color: #999999" >
+        <div style="font-size: 16px; color: #999999; margin: 0" >
           {{ post.excerpt | markdownify | replace: "Zhouheng Li", "<strong>Zhouheng Li</strong>" }}
         </div>
       </p>
