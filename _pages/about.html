@@ -101,6 +101,8 @@ redirect_from:
 
 <p style="line-height: 1; text-align: justify;  font-size: 16px;"></p>
 <ul style="font-size: 16px;">
+  {% assign stored_posts = "" %}
+
   {% for category in site.publication_category  %}
     {% assign title_shown = false %}
     {% assign sorted_posts = site.publications | sort: 'weight' %}
@@ -108,11 +110,11 @@ redirect_from:
       {% if post.category != category[0] %}
         {% continue %}
       {% endif %}
-        {% if post.paperteaser %}
-        <li>
-          {% include archive-single-about.html %}
-        </li>
-        {% endif %}
+      {% if post.paperteaser %}
+      <li>
+        {% include archive-single-about.html %}
+      </li>
+      {% endif %}
     {% endfor %}
   {% endfor %}
 

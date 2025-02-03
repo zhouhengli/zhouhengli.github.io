@@ -21,7 +21,7 @@ repository               : "zhouhengli/zhouhengli.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "DSC00267.JPG"
+  avatar           : "avatar.gif"
   name             : "Zhouheng Li"
   pronouns         : # example: "she/her"  
   bio              : "Ph.D. student at ZJU."
@@ -79,10 +79,11 @@ publication_category:
     title: 'Preprints'
   # books:
   #   title: 'Books'
+  journals:
+    title: 'Journal Papers' 
   conferences:
     title: 'Conference Papers'
-  journals:
-    title: 'Journal Papers'    
+   
 
 
 
