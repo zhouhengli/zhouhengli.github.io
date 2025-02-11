@@ -75,14 +75,21 @@ author:
 
 # Publication Category - The following the list of publication categories and their headings
 publication_category:
-  preprints:
-    title: 'Preprints'
+  # preprints:
+  #   title: 'Preprints'
   # books:
   #   title: 'Books'
-  journals:
-    title: 'Journal Papers' 
-  conferences:
-    title: 'Conference Papers'
+  # journals:
+  #   title: 'Journal Papers' 
+  # conferences:
+  #   title: 'Conference Papers'
+  racing:
+    title: "Racing"
+  confeasibility:
+    title: "Control feasibility"
+  drifting:
+    title: "Drifting"
+
    
 
 
