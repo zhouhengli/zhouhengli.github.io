@@ -37,7 +37,7 @@ author:
   orcid            : "https://orcid.org/0009-0009-5084-8556"
   semantic         : # URL
   pubmed           : # "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
-  researchgate     : "https://www.researchgate.net/profile/Zhouheng-Li" # URL
+  researchgate     : # URL
 
   # Repositories and software development
   bitbucket        : # Username - Update with your username on the site
