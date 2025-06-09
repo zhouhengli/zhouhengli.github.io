@@ -459,3 +459,68 @@
   background-color: #B01F24;
   font-size: .8em;
 }
+
+.replay_lb_suc {
+
+  align-items: center;
+  cursor: pointer;
+
+  /* position: absolute;  */
+  left: 100%; 
+  margin-left: 5px; 
+  white-space: nowrap;
+
+}
+
+
+.splide_kuka_prob_id_repl { 
+  font-size: 20px;
+  color: #666;
+  margin: 0px;
+  text-align: center;
+  position: relative; 
+  display: inline-block;
+}
+
+.cal_our_qual_caption {
+  margin-bottom: 10px; 
+  margin-top: 15px;
+}
+
+.video-container {
+  display: flex;                /* Align children (videos) in a row */
+  justify-content: center;      /* Center videos horizontally */
+  align-items: center;          /* Center videos vertically if needed */
+  flex-wrap: wrap;              /* Allows items to wrap onto the next line as needed */
+  /* margin: 40px; */
+  gap: 20px;
+}
+
+.cpdfu_gradient_text {
+  /* font-size: 50px; */
+  font-weight: bold;
+  // background: linear-gradient(to right, #AC55FC, #00B0F0, #AC55FC); /* Adjust colors */
+  background: linear-gradient(to right, #003F88, #005FAF 10%, #A51C30);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+/* Default link style: gray text, no underline */
+  sa {
+    color: #4e613e !important;
+    text-decoration: none !important;
+  }
+
+  /* Visited links keep the same style */
+  sa:visited {
+    color: #4e613e !important;
+    text-decoration: none !important;
+  }
+
+  /* Hover and focus state: darker gray, underline */
+  sa:hover,
+  sa:focus {
+    color: #2e3d1f !important;
+    text-decoration: underline !important;
+  }
