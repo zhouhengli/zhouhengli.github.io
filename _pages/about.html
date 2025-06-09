@@ -13,6 +13,26 @@ redirect_from:
 
 <style>
 
+  
+  /* Default link style: gray text, no underline */
+  a[sa] {
+    color: #4e613e !important;
+    text-decoration: none !important;
+  }
+
+  /* Visited links keep the same style */
+  a[sa]:visited {
+    color: #4e613e !important;
+    text-decoration: none !important;
+  }
+
+  /* Hover and focus state: darker gray, underline */
+  a[sa]:hover,
+  a[sa]:focus {
+    color: #2e3d1f !important;
+    text-decoration: underline !important;
+  }
+
   /* Right sidebar styles */
   .right-sidebar {
       position: fixed;  /* Fix the sidebar to the right */
@@ -34,13 +54,13 @@ redirect_from:
         </h4>
       </header>
       <ul class="toc__menu">
-          <a href="#About_me-section" >👀 About Me</a>
-          <a href="#Research-section" >🎯 Research</a>
-          <a href="#Recent_Demo-section" >🏎️ Recent Demo</a>
-          <a href="#News-section" >🔥 News</a>
-          <a href="#publications-section" >📝 Publications</a>
-          <a href="#Competitions-section" >🏁 Competitions</a>
-          <a href="#Internships-section" >💻 Internships</a>
+          <a sa href="#About_me-section" >👀 About Me</a>
+          <a sa href="#Research-section" >🎯 Research</a>
+          <a sa href="#Recent_Demo-section" >🏎️ Recent Demo</a>
+          <a sa href="#News-section" >🔥 News</a>
+          <a sa href="#publications-section" >📝 Publications</a>
+          <a sa href="#Competitions-section" >🏁 Competitions</a>
+          <a sa href="#Internships-section" >💻 Internships</a>
       </ul>
   </nav>
 </aside>
@@ -52,14 +72,14 @@ redirect_from:
 <h1 id="About_me-section"></h1>
 
 <p style="line-height: 1.5; text-align: justify; font-size: 16px;"> 
-    <span style="display: inline-block; text-indent: 2em;">I am currently a 3rd year Ph.D. student in the College of Control Science and Engineering at <img src="{{ base_path }}/media/ico/zju.jpg" style="width: 18px; height: auto;" /> <sa href="https://www.zju.edu.cn/english/ "  target=_blank >Zhejiang University</sa>
-, Hangzhou, China, under the supervision of  <sa href="https://scholar.google.com.hk/citations?hl=zh-CN&user=7ZZ_-m0AAAAJ" target=_blank  >Prof. Lei Xie</sa> and <sa href="https://scholar.google.com.hk/citations?hl=zh-CN&user=9rfFRjgAAAAJ" target=_blank  >Prof. Hongye Su</sa>. 
-    I will be visiting the <sa href="https://kempnerinstitute.harvard.edu/" target=_blank  >Kempner Institute</sa> at <img src="{{ base_path }}/media/ico/harvard.jpg" style="width: 16px; height: auto;" /> 
-    <sa href="https://www.harvard.edu/" target=_blank  >Harvard University</sa>'s <sa href="https://seas.harvard.edu/" target=_blank  >John A. Paulson School of Engineering and Applied Sciences (SEAS)</sa> starting in December 2025, supervised by <sa href="https://yilundu.github.io/" target=_blank  >Prof. Yilun Du</sa>. During the visit, my research will focus on safe, high-mobility trajectory planning methods with out-of-distribution generalization ability.
+    <span style="display: inline-block; text-indent: 2em;">I am currently a 3rd year Ph.D. student in the College of Control Science and Engineering at <img src="{{ base_path }}/media/ico/zju.jpg" style="width: 18px; height: auto;" /> <a sa  href="https://www.zju.edu.cn/english/ "  target=_blank >Zhejiang University</a>
+, Hangzhou, China, under the supervision of  <a sa href="https://scholar.google.com.hk/citations?hl=zh-CN&user=7ZZ_-m0AAAAJ" target=_blank  >Prof. Lei Xie</a> and <a sa href="https://scholar.google.com.hk/citations?hl=zh-CN&user=9rfFRjgAAAAJ" target=_blank  >Prof. Hongye Su</a>. 
+    I will be visiting the <a sa href="https://kempnerinstitute.harvard.edu/" target=_blank  >Kempner Institute</a> at <img src="{{ base_path }}/media/ico/harvard.jpg" style="width: 16px; height: auto;" /> 
+    <a sa href="https://www.harvard.edu/" target=_blank  >Harvard University</a>'s <a sa href="https://seas.harvard.edu/" target=_blank  >John A. Paulson School of Engineering and Applied Sciences (SEAS)</a> starting in December 2025, supervised by <a sa href="https://yilundu.github.io/" target=_blank  >Prof. Yilun Du</a>. During the visit, my research will focus on safe, high-mobility trajectory planning methods with out-of-distribution generalization ability.
 
       <br>
       
-    <span style="display: inline-block; text-indent: 2em;">Before joining Zhejiang University, I interned at <sa href="https://github.com/hikvision-research"  target=_blank >Hikvision Research Institute</sa> in Hangzhou, where I applied optimization methods for manipulators with ROS. ✨ Enjoyments of life: 🎲 Board Games (Splendor, Seven Wonders: Duel, etc), 👣 hiking, 🎾 tennis, 🏓 ping-pong, 🗺️ traveling. </span>
+    <span style="display: inline-block; text-indent: 2em;">Before joining Zhejiang University, I interned at <a sa href="https://github.com/hikvision-research"  target=_blank >Hikvision Research Institute</a> in Hangzhou, where I applied optimization methods for manipulators with ROS. ✨ Enjoyments of life: 🎲 Board Games (Splendor, Seven Wonders: Duel, etc), 👣 hiking, 🎾 tennis, 🏓 ping-pong, 🗺️ traveling. </span>
 
     
 </p>   
@@ -69,11 +89,11 @@ redirect_from:
 </div>
 
 <p style="line-height: 1.5; text-align: justify; font-size: 16px;"> 
-    <span style="display: inline-block; text-indent: 2em;">My ultimate goal is to develop embodied intelligent vehicles capable of seamlessly interacting with the physical world. (<sa href="#publications-section" >📝 Publications</sa>). To achieve this, my research focuses on decision-making methods powered by generative models and optimization-based trajectory planning methods designed for safety. Currently, I am exploring planning approaches for both single and multi-vehicle systems in autonomous racing and drifting, with a focus on the following key areas:</span> <br>
+    <span style="display: inline-block; text-indent: 2em;">My ultimate goal is to develop embodied intelligent vehicles capable of seamlessly interacting with the physical world. (<a sa href="#publications-section" >📝 Publications</a>). To achieve this, my research focuses on decision-making methods powered by generative models and optimization-based trajectory planning methods designed for safety. Currently, I am exploring planning approaches for both single and multi-vehicle systems in autonomous racing and drifting, with a focus on the following key areas:</span> <br>
     <span style="display: inline-block;">⭐ <strong>Safe Decision-Making and planning Using Generative Models</strong>: Using energy-based models (EBMs) for decision-making, while ensuring safety through model-based planning methods.</span> <br>  
     <span style="display: inline-block;">⭐ <strong>Integrated Trajectory Planning and Control</strong>: Aggressive vehicle motion is guaranteed by optimizing the velocity distribution within the MPC prediction horizon when planning racing trajectories.</span> <br>     
     <span style="display: inline-block;">⭐ <strong>Learning-Based Parameter Tuning for Motion Planners</strong>: Leveraging post-race data to optimize planner performance and push the boundaries of the vehicle's racing capabilities.</span>  <br>   
-    <span style="display: inline-block; text-indent: 2em;">I am also actively involved in applying these techniques to <sa href="https://f1tenth.org/"  target=_blank >Roboracer competition</sa>. If any of these topics caught your interest, feel free to drop me emails (📨 zh_li@zju.edu.cn). I enjoy collaborating on interesting projects and <strong>making amazing things happen together</strong>!</span>
+    <span style="display: inline-block; text-indent: 2em;">I am also actively involved in applying these techniques to <a sa href="https://roboracer.ai/"  target=_blank >Roboracer competition</a>. If any of these topics caught your interest, feel free to drop me emails (📨 zh_li@zju.edu.cn). I enjoy collaborating on interesting projects and <strong>making amazing things happen together</strong>!</span>
 
 <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid #d3d3d3;">
   <h1 id="Recent_Demo-section">🏎️ Recent Demo</h1>
@@ -153,16 +173,16 @@ redirect_from:
     <p style="line-height: 1; text-align: justify;  font-size: 16px;">
     <ul style="font-size: 16px;">
 	<li><strong>[May 2025]</strong> 🔥🔥🔥 I will present our work about VPMPCC for racing from 16:35 to 16:40 on Thursday in Room 406 at ICRA 2025.</li>
-    	<!-- <li><strong>[Mar. 2025]</strong> 🎉🎉🎉 Our paper about <sa href="https://arxiv.org/pdf/2410.05740"  target=_blank >drift in extreme turning</sa> that utilizes mpc is accepted by <sa href="https://ieee-iv.org/2025/"  target=_blank >IV 2025</sa>.</li> -->
-        <li><strong>[Mar. 2025]</strong> 🔥🔥🔥 I have released the <sa href="https://github.com/zhouhengli/VPMPCC"  target=_blank >VPMPCC</sa>, a local trajectory planning method with velocity prediction for autonomous racing.</li>
-        <!-- <li><strong>[Feb. 2025]</strong>  🎉🎉🎉 Our paper about <sa href="https://arxiv.org/abs/2502.04696"  target=_blank >adaptive learning-based model predictive control (ALMPC) strategy</sa> that utilizes Bayesian optimization is accepted by the Journal <sa href="https://www.sciencedirect.com/journal/robotics-and-autonomous-systems"  target=_blank >Robotics and Autonomous Systems</sa>.</li> -->
-        <li><strong>[Jan. 2025]</strong>  🎉🎉🎉 Our paper about <sa href="https://arxiv.org/pdf/2410.11570"  target=_blank >data-driven aggressive autonomous racing framework</sa> using velocity prediction MPCC and Bayesian optimization is accepted by <sa href="https://2025.ieee-icra.org/"  target=_blank >ICRA 2025</sa>.</li>
-        <li><strong>[Nov. 2024]</strong> 🔥🔥🔥 I have released the <sa href="https://github.com/zhouhengli/CiMPCC"  target=_blank >CiMPCC</sa>, a local trajectory planner for autonomous racing.</li>
-        <!-- <li><strong>[Oct. 2024]</strong> 🔥🔥🔥 Our research on <sa href="https://arxiv.org/pdf/2410.22643"  target=_blank >overtaking trajectory planning framework</sa> using  spatio-temporal topology and reachable set analysis is now available.</li> -->
-        <!-- <li><strong>[Oct. 2024]</strong> 🔥🔥🔥 Our research on <sa href="https://arxiv.org/pdf/2410.11570"  target=_blank >data-driven aggressive autonomous racing framework</sa> using velocity prediction MPCC and bayesian optimization is now available.</li> -->
-        <li><strong>[Sep. 2024]</strong>  🎉🎉🎉 Our paper about <sa href="https://www.sciencedirect.com/science/article/abs/pii/S0921889024002008"  target=_blank >rapid and safe trajectory planning for automated parking</sa> using path-velocity decomposition is accepted by the Journal <sa href="https://www.sciencedirect.com/journal/robotics-and-autonomous-systems"  target=_blank >Robotics and Autonomous Systems</sa>.</li>
-        <li><strong>[Jul. 2024]</strong> 🎉🎉🎉 Our paper about <sa href="https://its.papercept.net/conferences/scripts/abstract.pl?ConfID=87&Number=278"  target=_blank >Curvature-Integrated MPCC</sa> for autonomous racing is accepted by <sa href="https://ieee-itsc.org/2024/"  target=_blank >ITSC 2024</sa>.</li>
-        <li><strong>[Mar. 2024]</strong> 🎉🎉🎉 Our paper about <sa href="https://ieeexplore.ieee.org/abstract/document/10588721"  target=_blank >aggressive drifting</sa> for minimum time cornering based on MPC is accepted by <sa href="https://ieee-iv.org/2024/"  target=_blank >IV 2024</sa>.</li>
+    	<!-- <li><strong>[Mar. 2025]</strong> 🎉🎉🎉 Our paper about <a sa href="https://arxiv.org/pdf/2410.05740"  target=_blank >drift in extreme turning</a> that utilizes mpc is accepted by <a sa href="https://ieee-iv.org/2025/"  target=_blank >IV 2025</a>.</li> -->
+        <li><strong>[Mar. 2025]</strong> 🔥🔥🔥 I have released the <a sa href="https://github.com/zhouhengli/VPMPCC"  target=_blank >VPMPCC</a>, a local trajectory planning method with velocity prediction for autonomous racing.</li>
+        <!-- <li><strong>[Feb. 2025]</strong>  🎉🎉🎉 Our paper about <a sa href="https://arxiv.org/abs/2502.04696"  target=_blank >adaptive learning-based model predictive control (ALMPC) strategy</a> that utilizes Bayesian optimization is accepted by the Journal <a sa href="https://www.sciencedirect.com/journal/robotics-and-autonomous-systems"  target=_blank >Robotics and Autonomous Systems</a>.</li> -->
+        <li><strong>[Jan. 2025]</strong>  🎉🎉🎉 Our paper about <a sa href="https://arxiv.org/pdf/2410.11570"  target=_blank >data-driven aggressive autonomous racing framework</a> using velocity prediction MPCC and Bayesian optimization is accepted by <a sa href="https://2025.ieee-icra.org/"  target=_blank >ICRA 2025</a>.</li>
+        <li><strong>[Nov. 2024]</strong> 🔥🔥🔥 I have released the <a sa href="https://github.com/zhouhengli/CiMPCC"  target=_blank >CiMPCC</a>, a local trajectory planner for autonomous racing.</li>
+        <!-- <li><strong>[Oct. 2024]</strong> 🔥🔥🔥 Our research on <a sa href="https://arxiv.org/pdf/2410.22643"  target=_blank >overtaking trajectory planning framework</a> using  spatio-temporal topology and reachable set analysis is now available.</li> -->
+        <!-- <li><strong>[Oct. 2024]</strong> 🔥🔥🔥 Our research on <a sa href="https://arxiv.org/pdf/2410.11570"  target=_blank >data-driven aggressive autonomous racing framework</a> using velocity prediction MPCC and bayesian optimization is now available.</li> -->
+        <li><strong>[Sep. 2024]</strong>  🎉🎉🎉 Our paper about <a sa href="https://www.sciencedirect.com/science/article/abs/pii/S0921889024002008"  target=_blank >rapid and safe trajectory planning for automated parking</a> using path-velocity decomposition is accepted by the Journal <a sa href="https://www.sciencedirect.com/journal/robotics-and-autonomous-systems"  target=_blank >Robotics and Autonomous Systems</a>.</li>
+        <li><strong>[Jul. 2024]</strong> 🎉🎉🎉 Our paper about <a sa href="https://its.papercept.net/conferences/scripts/abstract.pl?ConfID=87&Number=278"  target=_blank >Curvature-Integrated MPCC</a> for autonomous racing is accepted by <a sa href="https://ieee-itsc.org/2024/"  target=_blank >ITSC 2024</a>.</li>
+        <li><strong>[Mar. 2024]</strong> 🎉🎉🎉 Our paper about <a sa href="https://ieeexplore.ieee.org/abstract/document/10588721"  target=_blank >aggressive drifting</a> for minimum time cornering based on MPC is accepted by <a sa href="https://ieee-iv.org/2024/"  target=_blank >IV 2024</a>.</li>
     </ul>
     </p>
 </div>
@@ -214,9 +234,9 @@ redirect_from:
 
 <p style="line-height: 1; text-align: justify; font-size: 16px;">
     <ul style="font-size: 16px;">
-        <li><sa href="https://iv2024-race.f1tenth.org/"  target=_blank >4th place in 18TH F1TENTH autonomous grand prix by IV 2024</sa> <br>
+        <li><a sa href="https://iv2024-race.f1tenth.org/"  target=_blank >4th place in 18TH F1TENTH autonomous grand prix by IV 2024</a> <br>
       2024 IEEE Intelligent Vehicles Symposium (IV 2024), June 3rd - 5th 2024, Jeju Shinhwa World, Jeju Island, Korea  <br>
-            <sa href="https://iv2024-race.f1tenth.org/results.html"  target=_blank ><strong>Zhouheng Li</strong>, Cheng Hu, Bei Zhou, Yonghao Fu, Guoqiang Wu, Yangyang Xie</sa><br>
+            <a sa href="https://iv2024-race.f1tenth.org/results.html"  target=_blank ><strong>Zhouheng Li</strong>, Cheng Hu, Bei Zhou, Yonghao Fu, Guoqiang Wu, Yangyang Xie</a><br>
         </li>
   </ul>
 
@@ -227,7 +247,7 @@ redirect_from:
 
 <p style="line-height: 1; text-align: justify; font-size: 16px;">
   <ul style="font-size: 16px;">
-	  <li>2021.12 - 2022.09, <sa href="https://github.com/hikvision-research"  target=_blank >Hikvision Research Institute (HRI)</sa>, Hangzhou, mentored by Researcher Weiwen Hu and Dr. Hao Zhu.<br>
+	  <li>2021.12 - 2022.09, <a sa href="https://github.com/hikvision-research"  target=_blank >Hikvision Research Institute (HRI)</a>, Hangzhou, mentored by Researcher Weiwen Hu and Dr. Hao Zhu.<br>
     </li>
   </ul>
 

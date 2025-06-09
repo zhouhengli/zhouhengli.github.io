@@ -505,22 +505,3 @@
   -webkit-text-fill-color: transparent;
   display: inline-block;
 }
-
-/* Default link style: gray text, no underline */
-  sa {
-    color: #4e613e !important;
-    text-decoration: none !important;
-  }
-
-  /* Visited links keep the same style */
-  sa:visited {
-    color: #4e613e !important;
-    text-decoration: none !important;
-  }
-
-  /* Hover and focus state: darker gray, underline */
-  sa:hover,
-  sa:focus {
-    color: #2e3d1f !important;
-    text-decoration: underline !important;
-  }
