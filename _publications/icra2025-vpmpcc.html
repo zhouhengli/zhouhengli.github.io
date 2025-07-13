@@ -1,0 +1,50 @@
+---
+title: "A Data-Driven Aggressive Autonomous Racing Framework Utilizing Local Trajectory Planning with Velocity Prediction"
+collection: publications
+category: PnC
+permalink: /publication/vpmpcc
+date: 2024-10-15
+paperteaser: "media/vpmpcc/teaser.gif"
+excerpt: "Zhouheng Li, Bei Zhou, Cheng Hu, Lei Xie, Hongye Su"
+venue: "2025 IEEE International Conference on Robotics & Automation"
+venue-brief: "ICRA 2025"
+venue-link: "https://2025.ieee-icra.org/"
+paperurl: "https://arxiv.org/pdf/2410.11570"
+code: "https://github.com/zhouhengli/VPMPCC"
+weight: 1
+citation: "Li Z, Zhou B, Hu C, et al. A Data-Driven Aggressive Autonomous Racing Framework Utilizing Local Trajectory Planning with Velocity Prediction[J]. arXiv preprint arXiv:2410.11570, 2024."
+citation-bib: "@article{li2024data,
+  title={A Data-Driven Aggressive Autonomous Racing Framework Utilizing Local Trajectory Planning with Velocity Prediction},
+  author={Li, Zhouheng and Zhou, Bei and Hu, Cheng and Xie, Lei and Su, Hongye},
+  journal={arXiv preprint arXiv:2410.11570},
+  year={2024}
+}"
+---
+
+<div style="text-align: center;">
+    <p>
+  		Authors: <strong>Zhouheng Li</strong><sup>1</sup>, Bei Zhou<sup>1</sup>, Cheng Hu<sup>1</sup>, Lei Xie<sup>1</sup>, Hongye Su<sup>1</sup>
+    </p>
+    <p>
+      <sup>1</sup>Zhejiang University, Hangzhou, China
+    </p>
+    <p>
+      <a href="https://arxiv.org/pdf/2410.11570">[paper]</a>
+    </p>
+  <strong style="font-size: 30px;">Abstract</strong>
+</div>
+
+<!-- <img src="../media/vpmpcc/Graphical_Abstract.jpg" alt="vpmpcc" style="width: 80%; height: auto;"> -->
+
+<div style="text-align: justify;">
+    <p style="font-size: 15px;">
+        <span style="display: inline-block; text-indent: 2em;">
+            The development of autonomous driving has boosted the research on autonomous racing. However, existing local trajectory planning methods have difficulty planning trajectories with optimal velocity profiles at racetracks with sharp corners, thus weakening the performance of autonomous racing. To address this problem, we propose a local trajectory planning method that integrates Velocity Prediction based on Model Predictive Contour Control (VPMPCC). The optimal parameters of VPMPCC are learned through Bayesian Optimization (BO) based on a proposed novel Objective Function adapted to Racing (OFR). Specifically, VPMPCC achieves velocity prediction by encoding the racetrack as a reference velocity profile and incorporating it into the optimization problem. This method optimizes the velocity profile of local trajectories, especially at corners with significant curvature. The proposed OFR balances racing performance with vehicle safety, ensuring safe and efficient BO training. In the simulation, the number of training iterations for OFR-based BO is reduced by <strong>42.86%</strong> compared to the state-of-the-art method. The optimal simulation-trained parameters are then applied to a real-world F1TENTH vehicle without retraining. During prolonged racing on a custom-built racetrack featuring significant sharp corners, the mean velocity of VPMPCC reaches <strong>93.18%</strong> of the vehicle's handling limits. The released code is available at https://github.com/zhouhengli/VPMPCC.
+		</span>
+	</p>
+</div>
+
+<div style="text-align: center;">
+    <img src="../racing.gif" alt="racing" style="width: 100%; height: auto;">
+</div>
+

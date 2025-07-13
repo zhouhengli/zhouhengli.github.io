@@ -96,7 +96,7 @@ redirect_from:
 
   <p style="line-height: 1.5; text-align: justify; font-size: 16px;"> 
     <span style="display: inline-block; text-indent: 2em;">
-    Navigation scenarios focus on decision-making and planning challenges that are constrained by multiple factors. Racing scenarios, on the other hand, involve integrated trajectory planning and control.</span>
+    Navigation scenarios emphasize complex decision-making and planning under coupled constraints. In contrast, racing scenarios require integrated trajectory planning and control, with a focus on reducing model mismatch.</span>
   </p>
 
   <h2>Navigation</h2>
@@ -165,6 +165,16 @@ redirect_from:
       </a>
     </div>
 
+    <div class=btn-links style="display: inline; margin-left: 0px;">
+      <a class="btn btn-outline-primary btn-page-header btn-sm show-button-big" 
+          href="https://arxiv.org/abs/2507.04384" 
+          style="text-decoration: none;"
+          target=_blank 
+          rel=noopener>
+          PDF
+      </a>
+    </div>
+
   </div>
 
     
@@ -172,7 +182,7 @@ redirect_from:
   <p style="line-height: 1.5; text-align: justify; font-size: 16px;"> 
     <span style="display: inline-block; text-indent: 2em;">Implementation of the proposed VPMPCC planner on the F1TENTH platform. The safe and aggressive cornering velocity with in the  <strong>  sharp U-turn</strong> is 11.5 km/h.</span><br>
     <div style="text-align: center;">
-        <img src="{{ base_path }}/media/racing.gif" alt="racing" style="width: 80%; height: auto;" preload>
+        <img src="{{ base_path }}/media/racing.gif" alt="racing" style="width: 90%; height: auto;" preload>
     </div>
   </p>
 
@@ -205,8 +215,11 @@ redirect_from:
   <h1 id="publications-section">📝 Selected Publications</h1>
 </div>
 
+
+
 <p style="line-height: 1; text-align: justify;  font-size: 16px;"></p>
 <ul style="font-size: 16px;">
+  <sup>*</sup> means equal contribution.
   {% assign stored_posts = "" %}
 
   {% for category in site.publication_category  %}
@@ -237,8 +250,8 @@ redirect_from:
           {% include archive-single-about.html %}
         </li>
       {% endunless %}
+    {% endfor %}
   {% endfor %}
-{% endfor %}
 </ul>
 
 <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid #d3d3d3;">

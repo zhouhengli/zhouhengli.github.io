@@ -48,6 +48,18 @@
                 </div>
             {% endif %}
 
+            {% if post.website %}
+                <div class=btn-links style="display: inline; margin-left: 5px;" id="title-{{ title | slugify }}">
+                    <a class="btn btn-outline-primary btn-page-header btn-sm show-button-big" 
+                        href="{{ post.website }}" 
+                        style="text-decoration: none;"
+                        target=_blank 
+                        rel=noopener>
+                        Web
+                    </a>
+                </div>
+            {% endif %}
+
             {% if post.citation %}
                 {% include popup-template.html %}
                 <script>
