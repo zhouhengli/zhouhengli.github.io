@@ -60,7 +60,7 @@ redirect_from:
           <a sa href="#News-section" >🔥 News</a>
           <a sa href="#publications-section" >📝 Publications</a>
           <a sa href="#Competitions-section" >🏁 Competitions</a>
-          <a sa href="#Internships-section" >💻 Internships</a>
+          <!-- <a sa href="#Internships-section" >💻 Internships</a> -->
       </ul>
   </nav>
 </aside>
@@ -73,7 +73,7 @@ redirect_from:
 
 <p style="line-height: 1.5; text-align: justify; font-size: 16px;"> 
     <span style="display: inline-block; text-indent: 2em;">I am currently a 3rd year Ph.D. student in the College of Control Science and Engineering at <img src="{{ base_path }}/media/ico/zju.jpg" style="width: 18px; height: auto;" /> <a sa  href="https://www.zju.edu.cn/english/ "  target=_blank >Zhejiang University</a>
-, Hangzhou, China, under the supervision of  <a sa href="https://scholar.google.com.hk/citations?hl=zh-CN&user=7ZZ_-m0AAAAJ" target=_blank  >Prof. Lei Xie</a> and <a sa href="https://scholar.google.com.hk/citations?hl=zh-CN&user=9rfFRjgAAAAJ" target=_blank  >Prof. Hongye Su</a>.  ✨ Enjoyments of life: 🎲 Board Games (Splendor, Seven Wonders: Duel, etc), 👣 hiking, 🎾 tennis, 🏓 ping-pong, 🗺️ traveling. </span>
+, Hangzhou, China, under the supervision of  <a sa href="https://scholar.google.com.hk/citations?hl=zh-CN&user=7ZZ_-m0AAAAJ" target=_blank  >Prof. Lei Xie</a> and <a sa href="https://scholar.google.com.hk/citations?hl=zh-CN&user=9rfFRjgAAAAJ" target=_blank  >Prof. Hongye Su</a>. Previously, I had the privilege of being mentored by <a sa href="https://yilundu.github.io/" target=_blank  >Prof. Yilun Du</a> at Harvard University. ✨ Enjoyments of life: 🎲 Board Games (Splendor, Seven Wonders: Duel, etc), 👣 hiking, 🎾 tennis, 🏓 ping-pong, 🗺️ traveling. </span>
     
 </p>   
 
@@ -82,22 +82,23 @@ redirect_from:
 </div>
 
 <p style="line-height: 1.5; text-align: justify; font-size: 16px;"> 
-    <span style="display: inline-block; text-indent: 2em;">My ultimate goal is to develop embodied intelligent vehicles capable of seamlessly interacting with the physical world. (<a sa href="#publications-section" >📝 Publications</a>). To achieve this, my research focuses on decision-making methods powered by generative models and optimization-based trajectory planning methods designed for safety. Currently, I am exploring planning approaches for both single and multi-vehicle systems in autonomous racing and drifting, with a focus on the following key areas:</span> <br>
-    <span style="display: inline-block;">⭐ <strong>Safe Decision-Making and planning Using Generative Models</strong>: Using energy-based models (EBMs) for decision-making, while ensuring safety through model-based planning methods.</span> <br>  
-    <span style="display: inline-block;">⭐ <strong>Integrated Trajectory Planning and Control</strong>: Aggressive vehicle motion is guaranteed by optimizing the velocity distribution within the MPC prediction horizon when planning racing trajectories.</span> <br>     
-    <span style="display: inline-block;">⭐ <strong>Learning-Based Parameter Tuning for Motion Planners</strong>: Leveraging post-race data to optimize planner performance and push the boundaries of the vehicle's racing capabilities.</span>  <br>   
+    <span style="display: inline-block; text-indent: 2em;">My ultimate goal is to develop embodied intelligent autonomous systems capable of seamlessly interacting with the physical world.  (<a sa href="#publications-section" >📝 Publications</a>). To achieve this, my research focuses on motion planning techniques driven by physics-informed generative models, enabling safe generalization to out-of-distribution (OOD) scenarios. Currently, I am exploring planning strategies for both autonomous vehicle racing and drone racing, as well as advancing world models, with particular emphasis on the following key areas:</span> <br>
+    <span style="display: inline-block;">⭐ <strong>End-to-End Motion Planning for Unmanned Systems</strong>: End-to-end approaches can directly learn motion patterns from data distributions, effectively bypassing the need for complex planning and control (PnC) rules. Conditional diffusion models, informed by physical and task-specific information, enable stable and safe generalization in motion generation, thus providing strong guarantees for overall system performance.</span> <br>  
+    <span style="display: inline-block;">⭐ <strong>Multimodal Generative Models</strong>: Multimodal inputs form the foundation of intelligent systems. By leveraging classifier-free guidance (CFG) for model composition, diverse modalities—such as images, language, and states—can be efficiently integrated, enabling the embodied intelligent motion generation.</span> <br>     
+    <span style="display: inline-block;">⭐ <strong>Physics-Informed World Models</strong>: At present, world models still face challenges in maintaining temporal consistency during long-horizon sequence generation. By incorporating physical knowledge, world models can generate in latent spaces that adhere to physical laws, thereby ensuring stability and consistency in their predictions.</span>  <br>   
     <span style="display: inline-block; text-indent: 2em;">I am also actively involved in applying these techniques to <a sa href="https://roboracer.ai/"  target=_blank >Roboracer competition</a>. If any of these topics caught your interest, feel free to drop me emails (📨 zh_li@zju.edu.cn). I enjoy collaborating on interesting projects and <strong>making amazing things happen together</strong>!</span>
 
 <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid #d3d3d3;">
-  <h1 id="Recent_Demo-section">🏎️ Spotlights</h1>
+  <h1 id="Recent_Demo-section">🚀  Spotlights</h1>
 </div>
 
   <p style="line-height: 1.5; text-align: justify; font-size: 16px;"> 
     <span style="display: inline-block; text-indent: 2em;">
-    Navigation scenarios emphasize complex decision-making and planning under coupled constraints. In contrast, racing scenarios require integrated trajectory planning and control, with a focus on reducing model mismatch.</span>
+    To demonstrate the effectiveness and robustness of my approaches, I showcase some demos that address distinct challenges: navigation, which emphasizes complex task and motion constraints, and racing, which requires highly integrated trajectory planning and control. 
+    </span>
   </p>
 
-  <h2>Navigation</h2>
+  <h2>End2End Navigation</h2>
   <div class="video-container" style="gap: 5px" >
     <div class="continuous_racing_item" id="Static_id">
       <div class="multi_hor_rm2d_caption cal_our_qual_caption" > 
@@ -176,7 +177,7 @@ redirect_from:
   </div>
 
     
-  <h2>Racing</h2>
+  <h2>Vehicle Racing</h2>
   <p style="line-height: 1.5; text-align: justify; font-size: 16px;"> 
     <span style="display: inline-block; text-indent: 2em;">Implementation of the proposed VPMPCC planner on the F1TENTH platform. The safe and aggressive cornering velocity with in the  <strong>  sharp U-turn</strong> is 11.5 km/h.</span><br>
     <div style="text-align: center;">
@@ -263,6 +264,16 @@ redirect_from:
             <a sa href="https://iv2024-race.f1tenth.org/results.html"  target=_blank ><strong>Zhouheng Li</strong>, Cheng Hu, Bei Zhou, Yonghao Fu, Guoqiang Wu, Yangyang Xie</a><br>
         </li>
   </ul>
+</p>
+<br>
 
+<div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid #d3d3d3;">
+  <h1 id="statistics-section">🤗 So Glad You're Here!</h1>
+</div>
 
+<script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=ffffff&w=800&t=tt&d=9qys66gQTt6HOPhHrAsOe8u_6WXi9LmFaGJr3eGMgMk&co=58a1d5'></script>
+
+<p style="line-height: 1; text-align: justify; font-size: 16px;">
+  I truly appreciate everyone who takes the time to visit my homepage :)
+</p>
 
