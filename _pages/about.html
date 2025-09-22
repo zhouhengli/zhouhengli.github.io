@@ -72,8 +72,8 @@ redirect_from:
 <h1 id="About_me-section"></h1>
 
 <p style="line-height: 1.5; text-align: justify; font-size: 16px;"> 
-    <span style="display: inline-block; text-indent: 2em;">I am currently a 3rd year Ph.D. student in the College of Control Science and Engineering at <img src="{{ base_path }}/media/ico/zju.jpg" style="width: 18px; height: auto;" /> <a sa  href="https://www.zju.edu.cn/english/ "  target=_blank >Zhejiang University</a>
-, Hangzhou, China, under the supervision of  <a sa href="https://scholar.google.com.hk/citations?hl=zh-CN&user=7ZZ_-m0AAAAJ" target=_blank  >Prof. Lei Xie</a> and <a sa href="https://scholar.google.com.hk/citations?hl=zh-CN&user=9rfFRjgAAAAJ" target=_blank  >Prof. Hongye Su</a>. Previously, I had the privilege of being mentored by <a sa href="https://yilundu.github.io/" target=_blank  >Prof. Yilun Du</a> from  Harvard University. ✨ Enjoyments of life: 🎲 Board Games (Splendor, Seven Wonders: Duel, etc), 👣 hiking, 🎾 tennis, 🏓 ping-pong, 🗺️ traveling. </span>
+    <span style="display: inline-block; text-indent: 2em;">I am currently a 4th year Ph.D. student in the College of Control Science and Engineering at <img src="{{ base_path }}/media/ico/zju.jpg" style="width: 18px; height: auto;" /> <a sa  href="https://www.zju.edu.cn/english/ "  target=_blank >Zhejiang University</a>
+, Hangzhou, China, under the supervision of  <a sa href="https://scholar.google.com.hk/citations?hl=zh-CN&user=7ZZ_-m0AAAAJ" target=_blank  >Prof. Lei Xie</a> and <a sa href="https://scholar.google.com.hk/citations?hl=zh-CN&user=9rfFRjgAAAAJ" target=_blank  >Prof. Hongye Su</a>. Previously, I was mentored by <a sa href="https://yilundu.github.io/" target=_blank  >Prof. Yilun Du</a> from  Harvard University. ✨ Enjoyments of life: 🎲 Board Games (Splendor, Seven Wonders: Duel, etc), 👣 hiking, 🎾 tennis, 🏓 ping-pong, 🗺️ traveling. </span>
     
 </p>   
 
@@ -94,9 +94,22 @@ redirect_from:
 
   <p style="line-height: 1.5; text-align: justify; font-size: 16px;"> 
     <span style="display: inline-block; text-indent: 2em;">
-    To demonstrate the effectiveness and robustness of my approaches, I showcase some demos that address distinct challenges: navigation, which emphasizes complex task and motion constraints, and racing, which requires highly integrated trajectory planning and control. 
+   To demonstrate the effectiveness and robustness of my approaches, I present several demos that tackle distinct challenges: <b>(i)</b> Multi-Agent Motion Planning (MAMP) in mining transportation, which requires improving loading-area throughput while ensuring safety; <b>(ii)</b> end-to-end navigation, which emphasizes handling complex collision-free tasks under motion constraints; and <b>(iii)</b> racing, which demands highly integrated trajectory planning and control. In addition, I fuse physics into the BEV world model to enhance long-term prediction performance.
+
+
     </span>
   </p>
+
+  <h2>Multi-Agent Motion Planning</h2>
+  <p style="line-height: 1.5; text-align: justify; font-size: 16px;"> 
+    <div style="text-align: center;">
+      <img src="{{ base_path }}/media/dmsp/vis_abstract_dmsp.jpg" alt="racing" style="width: 100%; height: auto;" preload>
+    </div>
+  </p>
+  <div class="left-caption" style="margin-top: 10px;">
+    <b>The Decentralized Multi-Agent Safe Motion Planning framework enables reliable coordination in mining transportation.</b> It decomposes the planning problem into ego reference-line tracking and opponent collision avoidance. A lightweight diffusion model with a U-Net backbone is designed to capture these features, allowing agents to learn <b class="cpdfu_gradient_text">waiting</b> and <b class="cpdfu_gradient_text">proceeding</b> behaviors that ensure safe multi-agent interactions.
+  </div>
+
 
   <h2>End2End Navigation</h2>
   <div class="video-container" style="gap: 5px" >
@@ -110,11 +123,11 @@ redirect_from:
             </span>
         </span>
       </div>
-        
-    <video id="antmaze_exp_qual_list_dset" muted autoplay="" preload="metadata" style="max-width: 240px">
-      <source src="{{ base_path }}/media/rstp/static_collision.mp4"  type="video/mp4">
-    </video>
-  </div>
+          
+      <video id="antmaze_exp_qual_list_dset" muted autoplay="" preload="metadata" style="max-width: 240px">
+        <source src="{{ base_path }}/media/rstp/static_collision.mp4"  type="video/mp4">
+      </video>
+    </div>
 
     <div id="Dynamic_id">
       <div class="multi_hor_rm2d_caption cal_our_qual_caption" > 
@@ -174,16 +187,146 @@ redirect_from:
       </a>
     </div>
 
+    <div class=btn-links style="display: inline; margin-left: 0px;">
+      <a class="btn btn-outline-primary btn-page-header btn-sm show-button-big" 
+          href="https://github.com/zhouhengli/rstp-mpc-planner" 
+          style="text-decoration: none;"
+          target=_blank 
+          rel=noopener>
+          MPC
+      </a>
+    </div>
+
+    <div class=btn-links style="display: inline; margin-left: 0px;">
+      <a class="btn btn-outline-primary btn-page-header btn-sm show-button-big" 
+          href="https://github.com/zhouhengli/ritp" 
+          style="text-decoration: none;"
+          target=_blank 
+          rel=noopener>
+          ItCA
+      </a>
+    </div>
+
   </div>
 
     
   <h2>Vehicle Racing</h2>
-  <p style="line-height: 1.5; text-align: justify; font-size: 16px;"> 
-    <span style="display: inline-block; text-indent: 2em;">Implementation of the proposed VPMPCC planner on the F1TENTH platform. The safe and aggressive cornering velocity with in the  <strong>  sharp U-turn</strong> is 11.5 km/h.</span><br>
+  <!-- <p style="line-height: 1.5; text-align: justify; font-size: 16px;">  -->
+    <!-- <span style="display: inline-block; text-indent: 2em;">Implementation of the proposed VPMPCC planner on the F1TENTH platform. The safe and aggressive cornering velocity with in the  <strong>  sharp U-turn</strong> is 11.5 km/h.</span><br> -->
     <div style="text-align: center;">
         <img src="{{ base_path }}/media/racing.gif" alt="racing" style="width: 90%; height: auto;" preload>
     </div>
-  </p>
+
+  <div class="left-caption" style="margin-top: 10px;">
+    Implementation of the proposed VPMPCC planner on the F1TENTH platform. The safe and aggressive cornering velocity with in the  <b class="cpdfu_gradient_text">sharp U-turn</b> is 11.5 km/h.
+  </div>
+  <!-- </p> -->
+
+  <h2>Physics-Informed BEV World Model</h2>
+  <div class="video-container" style="gap: 20px" >
+    <div class="continuous_racing_item" id="piwm1_baseline">
+      <div class="multi_hor_rm2d_caption cal_our_qual_caption" > 
+        Baseline with Eat up (<a sa href="https://arxiv.org/abs/2405.12399"  target=_blank >DIAMOND</a>)
+        <span class="splide_kuka_prob_id_repl">
+            <span class="replay_lb_suc" video_section="piwm1_baseline">
+              <img src="media/replay.png" style="width: 15px; height: auto;" />
+              <span>replay</span>
+            </span>
+        </span>
+      </div>
+          
+      <video id="antmaze_exp_qual_list_dset" muted autoplay="" preload="metadata" style="max-width: 350px">
+        <source src="{{ base_path }}/media/piwm/baseline_1.mp4"  type="video/mp4">
+      </video>
+    </div>
+
+    <div class="continuous_racing_item" id="piwm2_baseline">
+      <div class="multi_hor_rm2d_caption cal_our_qual_caption" > 
+        Baseline with Eat up (<a sa href="https://arxiv.org/abs/2405.12399"  target=_blank >DIAMOND</a>)
+        <span class="splide_kuka_prob_id_repl">
+          <span class="replay_lb_suc" video_section="piwm2_baseline">
+            <img src="media/replay.png" style="width: 15px; height: auto;"/>
+            <span>replay</span>
+          </span>
+        </span>
+      </div>
+
+      <video id="antmaze_exp_qual_list_rollout" muted autoplay="" preload="metadata" style="max-width: 350px">
+        <source src="{{ base_path }}/media/piwm/baseline_2.mp4" type="video/mp4">
+      </video>
+
+    </div>
+
+    <div class="continuous_racing_item" id="piwm1">
+      <div class="multi_hor_rm2d_caption cal_our_qual_caption" > 
+        Soft Mask  with Consistency
+        <span class="splide_kuka_prob_id_repl">
+            <span class="replay_lb_suc" video_section="piwm1">
+              <img src="media/replay.png" style="width: 15px; height: auto;" />
+              <span>replay</span>
+            </span>
+        </span>
+      </div>
+          
+      <video id="antmaze_exp_qual_list_dset" muted autoplay="" preload="metadata" style="max-width: 350px">
+        <source src="{{ base_path }}/media/piwm/softmask_1.mp4"  type="video/mp4">
+      </video>
+    </div>
+
+    <div id="piwm2">
+      <div class="multi_hor_rm2d_caption cal_our_qual_caption" > 
+        Soft Mask  with Consistency
+        <span class="splide_kuka_prob_id_repl">
+          <span class="replay_lb_suc" video_section="piwm2">
+            <img src="media/replay.png" style="width: 15px; height: auto;"/>
+            <span>replay</span>
+          </span>
+        </span>
+      </div>
+
+      <video id="antmaze_exp_qual_list_rollout" muted autoplay="" preload="metadata" style="max-width: 350px">
+        <source src="{{ base_path }}/media/piwm/softmask_4.mp4" type="video/mp4">
+      </video>
+
+    </div>
+
+  </div>
+
+  <div class="left-caption" style="margin-top: 10px;">
+    The <b class="cpdfu_gradient_text">Physics-Informed World Model</b> is a lightweight generative model that predicts future images conditioned on the current scene and control inputs. By incorporating the relative distance between the ego vehicle and surrounding vehicles via a <b class="cpdfu_gradient_text">soft mask</b> as an additional conditioning signal, it effectively captures inter-vehicle interactions, thereby enabling forecasting with strong existential and temporal consistency in dynamic environments.
+
+    <div class=btn-links style="display: inline; margin-left: 5px;">
+      <a class="btn btn-outline-primary btn-page-header btn-sm show-button-big" 
+          href="https://physics-wm.github.io/" 
+          style="text-decoration: none;"
+          target=_blank 
+          rel=noopener>
+          Web
+      </a>
+    </div>
+
+    <div class=btn-links style="display: inline; margin-left: 0px;">
+      <a class="btn btn-outline-primary btn-page-header btn-sm show-button-big" 
+          href="https://arxiv.org/abs/2509.12437" 
+          style="text-decoration: none;"
+          target=_blank 
+          rel=noopener>
+          PDF
+      </a>
+    </div>
+
+    <div class=btn-links style="display: inline; margin-left: 0px;">
+      <a class="btn btn-outline-primary btn-page-header btn-sm show-button-big" 
+          href="https://github.com/TUM-AVS/physics-wm" 
+          style="text-decoration: none;"
+          target=_blank 
+          rel=noopener>
+          Code
+      </a>
+    </div>
+
+  </div>
+
 
 <br>
 
@@ -194,7 +337,8 @@ redirect_from:
 <div class="scrollable-content">
     <p style="line-height: 1; text-align: justify;  font-size: 16px;">
     <ul style="font-size: 16px;">
-	<li><strong>[May 2025]</strong> 🔥🔥🔥 I will present our work about VPMPCC for racing from 16:35 to 16:40 on Thursday in Room 406 at ICRA 2025.</li>
+        <li><strong>[Sep. 2025]</strong> 🔥🔥🔥 I have released the implementation of <a sa href="https://github.com/zhouhengli/ritp"  target=_blank >RITP</a> and <a sa href="https://github.com/zhouhengli/rstp-mpc-planner"  target=_blank >RSTP-MPC</a>.</li>
+	      <li><strong>[May 2025]</strong> 🔥🔥🔥 I will present our work about VPMPCC for racing from 16:35 to 16:40 on Thursday in Room 406 at ICRA 2025.</li>
     	<!-- <li><strong>[Mar. 2025]</strong> 🎉🎉🎉 Our paper about <a sa href="https://arxiv.org/pdf/2410.05740"  target=_blank >drift in extreme turning</a> that utilizes mpc is accepted by <a sa href="https://ieee-iv.org/2025/"  target=_blank >IV 2025</a>.</li> -->
         <li><strong>[Mar. 2025]</strong> 🔥🔥🔥 I have released the <a sa href="https://github.com/zhouhengli/VPMPCC"  target=_blank >VPMPCC</a>, a local trajectory planning method with velocity prediction for autonomous racing.</li>
         <!-- <li><strong>[Feb. 2025]</strong>  🎉🎉🎉 Our paper about <a sa href="https://arxiv.org/abs/2502.04696"  target=_blank >adaptive learning-based model predictive control (ALMPC) strategy</a> that utilizes Bayesian optimization is accepted by the Journal <a sa href="https://www.sciencedirect.com/journal/robotics-and-autonomous-systems"  target=_blank >Robotics and Autonomous Systems</a>.</li> -->
@@ -204,7 +348,7 @@ redirect_from:
         <!-- <li><strong>[Oct. 2024]</strong> 🔥🔥🔥 Our research on <a sa href="https://arxiv.org/pdf/2410.11570"  target=_blank >data-driven aggressive autonomous racing framework</a> using velocity prediction MPCC and bayesian optimization is now available.</li> -->
         <li><strong>[Sep. 2024]</strong>  🎉🎉🎉 Our paper about <a sa href="https://www.sciencedirect.com/science/article/abs/pii/S0921889024002008"  target=_blank >rapid and safe trajectory planning for automated parking</a> using path-velocity decomposition is accepted by the Journal <a sa href="https://www.sciencedirect.com/journal/robotics-and-autonomous-systems"  target=_blank >Robotics and Autonomous Systems</a>.</li>
         <li><strong>[Jul. 2024]</strong> 🎉🎉🎉 Our paper about <a sa href="https://its.papercept.net/conferences/scripts/abstract.pl?ConfID=87&Number=278"  target=_blank >Curvature-Integrated MPCC</a> for autonomous racing is accepted by <a sa href="https://ieee-itsc.org/2024/"  target=_blank >ITSC 2024</a>.</li>
-        <li><strong>[Mar. 2024]</strong> 🎉🎉🎉 Our paper about <a sa href="https://ieeexplore.ieee.org/abstract/document/10588721"  target=_blank >aggressive drifting</a> for minimum time cornering based on MPC is accepted by <a sa href="https://ieee-iv.org/2024/"  target=_blank >IV 2024</a>.</li>
+        <!-- <li><strong>[Mar. 2024]</strong> 🎉🎉🎉 Our paper about <a sa href="https://ieeexplore.ieee.org/abstract/document/10588721"  target=_blank >aggressive drifting</a> for minimum time cornering based on MPC is accepted by <a sa href="https://ieee-iv.org/2024/"  target=_blank >IV 2024</a>.</li> -->
     </ul>
     </p>
 </div>
@@ -259,9 +403,11 @@ redirect_from:
 
 <p style="line-height: 1; text-align: justify; font-size: 16px;">
     <ul style="font-size: 16px;">
-        <li><a sa href="https://iv2024-race.f1tenth.org/"  target=_blank >4th place in 18TH F1TENTH autonomous grand prix by IV 2024</a> <br>
-      2024 IEEE Intelligent Vehicles Symposium (IV 2024), June 3rd - 5th 2024, Jeju Shinhwa World, Jeju Island, Korea  <br>
-            <a sa href="https://iv2024-race.f1tenth.org/results.html"  target=_blank ><strong>Zhouheng Li</strong>, Cheng Hu, Bei Zhou, Yonghao Fu, Guoqiang Wu, Yangyang Xie</a><br>
+        <li><a sa href="https://iv2024-race.f1tenth.org/results.html"  target=_blank >4th place</a> in <a sa href="https://iv2024-race.f1tenth.org/"  target=_blank >18TH F1TENTH autonomous grand prix by IV 2024</a> 
+        <br>
+          2024 IEEE Intelligent Vehicles Symposium (IV 2024), June 3rd - 5th 2024, Jeju Shinhwa World, Jeju Island, Korea  
+        <br>
+            <strong>Zhouheng Li</strong>, Cheng Hu, Bei Zhou, Yonghao Fu, Guoqiang Wu, Yangyang Xie<br>
         </li>
   </ul>
 </p>
